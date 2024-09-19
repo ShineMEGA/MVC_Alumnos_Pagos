@@ -55,7 +55,7 @@ namespace AlumnosPagosApp.Migrations
 
                     b.HasKey("AlumnoID");
 
-                    b.ToTable("Alumnos");
+                    b.ToTable("Alumnos", (string)null);
                 });
 
             modelBuilder.Entity("AlumnosPagosApp.Models.Pago", b =>
@@ -83,7 +83,7 @@ namespace AlumnosPagosApp.Migrations
 
                     b.HasIndex("AlumnoID");
 
-                    b.ToTable("Pagos");
+                    b.ToTable("Pagos", (string)null);
                 });
 
             modelBuilder.Entity("AlumnosPagosApp.Models.Pago", b =>

@@ -251,3 +251,4 @@ C:\git\AlumnosPagosApp\obj\Debug\net8.0\refint\AlumnosPagosApp.dll
 C:\git\AlumnosPagosApp\obj\Debug\net8.0\AlumnosPagosApp.pdb
 C:\git\AlumnosPagosApp\obj\Debug\net8.0\AlumnosPagosApp.genruntimeconfig.cache
 C:\git\AlumnosPagosApp\obj\Debug\net8.0\ref\AlumnosPagosApp.dll
+C:\git\AlumnosPagosApp\obj\Debug\net8.0\AlumnosPagosApp.sourcelink.json
