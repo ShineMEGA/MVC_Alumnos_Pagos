@@ -1,0 +1,49 @@
+﻿@model AlumnosPagosApp.Models.Alumno
+
+@{
+    ViewData["Title"] = "Pagos del Alumno";
+}
+
+<h1>Pagos de @Model.NombreCompleto</h1>
+
+<p>
+    <a asp-action="Index">Volver a la lista de alumnos</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pagos.First().FechaPago)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pagos.First().Monto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pagos.First().Concepto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pago in Model.Pagos)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => pago.FechaPago)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => pago.Monto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => pago.Concepto)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-controller="Pagos" asp-route-id="@pago.PagoID" class="btn btn-warning btn-sm">Editar</a>
+                    <a asp-action="Details" asp-controller="Pagos" asp-route-id="@pago.PagoID" class="btn btn-info btn-sm">Detalles</a>
+                    <a asp-action="Delete" asp-controller="Pagos" asp-route-id="@pago.PagoID" class="btn btn-danger btn-sm">Borrar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
